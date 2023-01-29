@@ -1,0 +1,18 @@
+<div class="row col-sm-8 col-md-5 col-lg-4 justify-content-center" style="margin:0px;width:100%;height:100%;position:fixed;left: 0px;top: 0px;background-color: rgba(0, 0, 0, 0.534);padding: 10px;z-index: 99;" id="bghider">
+    <div class="container bg-light border-primary input-group justify-content-center" style="width: fit-content;padding:10px;height: fit-content;margin-top:80px;">
+        <div class="col-12 mb-3">
+            <input type="name" id="name" name="name" class="form-control" placeholder="put your name here" required="">
+        </div>
+        <div class="col-12 mb-3">
+            <input type="phonenumber" id="phonenumber" name="name" class="form-control" placeholder="put your phonenumber here" required="">
+        </div>
+        <div class="col-12 mb-3">
+            <textarea name="message" id="message" class="form-control" cols="30" rows="10" placeholder="Message" required=""></textarea>
+        </div>
+        <div class="btn-group" role="group">
+            <button class="btn btn-light border-dark" onclick="document.getElementById('bghider').remove()">Cancle</button>
+            <button class="btn btn-primary border-dark" onclick="sendmessage('spinner2')"><span style="visibility: hidden;" id="spinner2" class="spinner-border spinner-border-sm"></span>Send</button>
+        </div>
+        
+    </div>
+</div>
