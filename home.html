@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container-fluid row justify-content-center mb-5" style="margin-left:0;margin-right:0;">
+        <div class="p-2 m-2 mt-4 mb-0 col-lg-3 col-md-5 col-sm-12 text-center justify-content-center "><div class="fs-4 mb-3">What Is Ensafil and what it is used for?</div> <div class="mb-2"><code>Ensafil</code> is a tool that that will help you make your decision on what branch of engineering is best for you based on your own preferences.</div></div>
+        <div class="p-2 m-2 col-lg-5 col-md-5 col-sm-12 text-center justify-content-center "><div class="fs-4 mb-3">How to use Ensafil?</div> <div class="mb-2"><code>Ensafil</code> will ask you to rate subjects that are presented in all branches of the engineering curriculum, and based on your rating <code>Ensafil</code> will show you a list of branches descending form best to worst.</div><a href="{{ url_for('home') }}#getting-started"class="btn btn-primary">Get Started</a></div>
+        <div class="p-2 m-2  mt-4 mb-0 col-lg-3 col-md-10 col-sm-12 text-center justify-content-center "><div class="fs-4 mb-3">Other tools?</div><div class="mb-2">this section is reserved to announce upcomming tools in the future. <br> if you have any useful ideas do not hesitate to contact me.</div><button class="btn btn-info text-light" onclick="contactme()">contact me</button></div>
+    </div>
+    <div style="width: 100%; height:100px;">
+
+    </div> 
+    <div class="container-fluid row justify-content-center" id="getting-started">
+        <div class="fs-3 mb-2" style="color: rgb(255, 87, 115);width: fit-content;">let's get started</div>
+        <div class="col-sm-10 col-md-6">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Fullname" aria-label="Enter your fullname" aria-describedby="gobtn" id="fullname">
+                <button class="btn btn-outline-primary" onclick="getstarted(document.getElementById('fullname').value,'spinner')" type="button" id="gobtn"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-flulid row justify-content-center btn" style="width: 100%; height:50px;">
+        <div id="spinner" class="spinner-border text-primary" style="visibility: hidden;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+    <div class="container-fluid row justify-content-center" id="ratingboard" style="margin: 0;padding: 0;">
+    </div>
+    
+{% endblock content %}
